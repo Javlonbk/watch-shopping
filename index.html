@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online shop</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="block container">
+        <nav class="d-flex justify-content-between">
+            <div class="home-button ">
+                <i class="bi bi-house-door"></i>
+                <button  class="btn " onclick="renderAll()">mahsulotlar</button>
+            </div>
+            <div class="home-button ">
+                <i class="bi bi-cart-check">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        0
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                </i>
+                <!-- <span>1</span> -->
+                <button class="btn position-relative" onclick="openKorzina()">
+                    savatcha
+                   
+                </button>
+            </div>
+        </nav>
+
+        <div class="main">
+            <form name="forma">
+            
+                <div class="my-4 d-flex justify-content-around align-items-center">
+                    <select name="category" class='form-select' onchange="searchByCategory()">
+                        <option value="" selected style="font-weight: bold;">Category</option>
+                    </select>
+                     
+                    <!-- narxi oralig'ini aniqlash -->
+                    <div class="d-flex align-items-center"><input type="number" name="priceStart" class="form-control mx-3" oninput="searchByPrice()">
+                        -dan</div>
+                    
+                        <div class="d-flex align-items-center">
+                            <input type="number" name="priceEnd" class="form-control mx-3" oninput="searchByPrice()">
+                            -gacha
+                        </div>
+                    
+                    <!-- --- -->
+    
+                </div>
+                <div>
+                    <input type="search" oninput="searchByName(this)" placeholder="Qidiruv" class="form-control w-100" name="search">
+                </div>
+                
+            </form>
+            
+            <div class="shopping_products">
+               
+                 
+            </div>
+
+        </div>
+        <div class="korzinka">
+            
+        </div>
+        
+
+    </div>
+    
+   
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
